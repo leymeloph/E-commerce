@@ -1,0 +1,165 @@
+/* ===== Base Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #FFF8DC; /* Khaki */
+    color: #4B3832; /* Dark brown */
+}
+
+/* ===== Header ===== */
+header {
+
+/* <-- Notice the / at the start */
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+
+.header-overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F0E68C; /* Khaki hover */
+}
+
+/* ===== Layout ===== */
+main.content {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* ===== Sections ===== */
+section {
+    background: #FFF8DC;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #C19A6B;
+    padding-bottom: 5px;
+}
+
+/* ===== Graphics & Videos ===== */
+.graphics img, .videos video {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 2px solid #C19A6B;
+}
+
+/* ===== Products ===== */
+.products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.products .product {
+    background: #FAF3E0;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #C19A6B;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.products .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.products img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* ===== Fundraising ===== */
+.fundraising {
+    text-align: center;
+    background: #DEB887; /* Burlywood */
+    padding: 20px;
+    margin-top: 15px;
+    border-top: 4px solid #A0522D;
+}
+
+.progress-container {
+    background: #FFF8DC;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #C19A6B;
+    margin: 10px auto;
+    max-width: 400px;
+}
+
+.progress-bar {
+    height: 20px;
+    background: linear-gradient(90deg, #8B4513, #C19A6B);
+    width: 0%;
+    transition: width 1s ease;
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 10px 20px;
+    background: #8B4513;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #A0522D;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    main.content {
+        grid-template-columns: 1fr;
+    }
+    .graphics, .products, .videos {
+        order: initial;
+    }
+}
+
